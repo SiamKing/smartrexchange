@@ -1,0 +1,2 @@
+module UsDollarsHelper
+end
