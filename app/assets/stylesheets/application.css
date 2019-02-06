@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+ }
+
+ body {
+    background: #00b3ed url(main-bg.jpg) no-repeat;
+    background-position-x: right;
+ }
+
+ .logo {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 100px;
+ }
