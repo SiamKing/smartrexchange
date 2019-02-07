@@ -1,14 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe UsDollar, type: :request do
+RSpec.describe UsDollar, type: :feature do
     describe "request one day view" do
         it "successfully renders one_day template" do
-            get usd_one_day_path
-            expect(response).to be_successful
+            visit usd_one_day_path
+            expect(page).to have_css('#chart-1')
         end
 
         it "queries Cotacoes API for one day ratio" do
-            uri = URI('https://api.cotacoes.uol.com/currency/intraday/list/month?format=JSON&fields=askvalue,date&currency=1')
+            
+            uri = URI('https://api.cotacoes.uol.com/currency/intraday/list?currency=1&fields=askvalue,date&format=JSON')
 
             response = Net::HTTP.get(uri)
 
