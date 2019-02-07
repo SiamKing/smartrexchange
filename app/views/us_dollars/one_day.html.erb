@@ -1,0 +1,3 @@
+<div class="centered">
+        <%= area_chart @request['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}, points: false, label: "USD" %>
+</div>
