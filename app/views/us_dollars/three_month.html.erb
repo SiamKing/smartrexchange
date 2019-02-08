@@ -1,4 +1,4 @@
 <div class="centered">
     <%= render "view_links" %>
-    <%= area_chart @request['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}, points: false, label: "USD" %>
+    <%= area_chart @chart_data, points: false, label: "USD" %>
 </div>

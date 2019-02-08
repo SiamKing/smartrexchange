@@ -1,6 +1,6 @@
 <div class="centered">
     <%= render "view_links" %>
-    <%= area_chart @request['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}, points: false, label: "USD" %>
+    <%= area_chart @chart_data, points: false, label: "USD" %>
     <div>
         <%= active_link_to "USD", usd_one_day_path, method: "get", class: "btn btn-primary", id: "usd-one-day", active: :inclusive %>
     </div>
