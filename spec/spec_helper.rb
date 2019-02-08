@@ -77,6 +77,15 @@ RSpec.configure do |config|
           'User-Agent'=>'Faraday v0.15.4'
            }).
          to_return(status: 200, body: '{"prev":null,"next":null,"docs":[{"askvalue":3.7108,"date":"20190207000000"}]}', headers: {})
+
+         stub_request(:get, "https://api.cotacoes.uol.com/currency/interday/list/months?currency=1&fields=askvalue,date&format=JSON").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v0.15.4'
+           }).
+         to_return(status: 200, body: '{"prev":null,"next":null,"docs":[{"askvalue":3.7108,"date":"20190207000000"}]}', headers: {})
     end
 
 
