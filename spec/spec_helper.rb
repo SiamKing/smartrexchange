@@ -59,6 +59,15 @@ RSpec.configure do |config|
             "askvalue": 2.6343,
             "date": "20190206172000"
         }]}', headers: {})
+
+        stub_request(:get, "https://api.cotacoes.uol.com/currency/interday/list/week?currency=1&fields=askvalue,date&format=JSON").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v0.15.4'
+           }).
+         to_return(status: 200, body: '{"prev":null,"next":null,"docs":[{"askvalue":3.7065,"date":"20190206000000"},{"askvalue":3.6664,"date":"20190205000000"},{"askvalue":3.6728,"date":"20190204000000"},{"askvalue":3.6622,"date":"20190201000000"},{"askvalue":3.6588,"date":"20190131000000"},{"askvalue":3.7246,"date":"20190130000000"}]}', headers: {})
     end
 
 
