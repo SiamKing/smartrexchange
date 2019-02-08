@@ -16,6 +16,14 @@ RSpec.describe UsDollar, type: :feature do
             expect(response).to be_an_instance_of(String)
         end
 
+        it "routes to one_week view when link is clicked" do
+            visit usd_one_day_path
+            click_link "1 Week"
+            
+            expect(page).to_not have_css('#usd-one-day.active')
+            expect(page).to have_css('#usd-one-week.active')
+        end
+
         it "successfully renders one_week view" do
             visit usd_one_week_path
             expect(page).to have_css('#chart-1')
