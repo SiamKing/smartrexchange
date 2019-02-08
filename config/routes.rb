@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/us_dollars/one_week', to: 'us_dollars#one_week', as: 'usd_one_week'
   get '/us_dollars/one_month', to: 'us_dollars#one_month', as: 'usd_one_month'
   get '/us_dollars/three_month', to: 'us_dollars#three_month', as: 'usd_three_month'
+  get '/us_dollars/one_year', to: 'us_dollars#one_year', as: 'usd_one_year'
 end
