@@ -2,6 +2,6 @@
     <%= render "view_links" %>
     <%= render partial: "shared/chart", locals: {chart_data: @chart_data, label: "USD"} %>
     <div>
-        <%= active_link_to "USD", usd_one_day_path, method: "get", class: "btn btn-primary", id: "usd-one-day", active: :inclusive %>
+        <%= active_link_to "USD", usd_one_day_path, method: "get", class: "btn btn-primary", id: "usd", active: ["us_dollars"] %>
     </div>
 </div>

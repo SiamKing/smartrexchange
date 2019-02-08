@@ -1,4 +1,5 @@
 <div class="centered">
     <%= render "view_links" %>
     <%= render partial: "shared/chart", locals: {chart_data: @chart_data, label: "USD"} %>
+    <%= active_link_to "USD", usd_one_day_path, method: "get", class: "btn btn-primary", id: "usd", active: ["us_dollars"] %>
 </div>
