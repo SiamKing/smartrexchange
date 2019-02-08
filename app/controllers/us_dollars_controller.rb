@@ -1,23 +1,24 @@
 class UsDollarsController < ApplicationController
+    CURRENCY_CODE = '1'
 
     def one_day
-        @chart_data = helpers.api_call('intraday', '', '1')
+        @chart_data = helpers.api_call(INTRADAY, '', CURRENCY_CODE)
     end
 
     def one_week
-        @chart_data = helpers.api_call('interday', '/week', '1')
+        @chart_data = helpers.api_call(INTERDAY, WEEK, CURRENCY_CODE)
     end
     
     def one_month
-        @chart_data = helpers.api_call('interday', '/month', '1')
+        @chart_data = helpers.api_call(INTERDAY, MONTH, CURRENCY_CODE)
         
     end
 
     def three_month
-        @chart_data = helpers.api_call('interday', '/months', '1')
+        @chart_data = helpers.api_call(INTERDAY, MONTHS, CURRENCY_CODE)
     end
     
     def one_year
-        @chart_data = helpers.api_call('interday', '/year', '1')
+        @chart_data = helpers.api_call(INTERDAY, YEAR, CURRENCY_CODE)
     end
 end
