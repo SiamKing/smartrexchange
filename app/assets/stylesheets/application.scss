@@ -14,40 +14,46 @@
 @import "bootstrap";
 
 body {
-    margin: 0 auto;
-    padding: 0;
-    height: 100%;
-    font-family: sans-serif;
- }
+   margin: 0 auto;
+   padding: 0;
+   height: 100%;
+   font-family: sans-serif;
+}
 
- body {
-    background: #00b3ed url(main-bg.jpg) no-repeat;
-    background-position-x: right;
- }
+body {
+   background: #00b3ed url(main-bg.jpg) no-repeat;
+   background-position-x: right;
+}
 
- .logo {
-    color: #fff;
-    font-size: 36px;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-left: 100px;
- }
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
 
- #chart-1 {
-    background-color: #adbed8;
-    height: 500px;
-    border-color: white;
-    color: white;
+.navbar-brand {
+   color: #fff !important;
+   font-size: 36px;
+   font-weight: 500;
+   margin-top: 10px;
+   padding-left: 40px;
+}
+
+#chart-1 {
+   background-color: #adbed8;
+   height: 500px;
+   border-color: white;
+   font-size: 30px;
 }
 
 .centered {
-    width: 60%;
-    height: 60%;
+   width: 60%;
+   height: 60%;
 
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+   position: absolute;
+   top:0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
 }
