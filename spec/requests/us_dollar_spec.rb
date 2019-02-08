@@ -33,8 +33,18 @@ RSpec.describe UsDollar, type: :feature do
             visit usd_one_week_path
             click_link "1 Month"
 
+            expect(page).to have_css('#chart-1')
             expect(page).to_not have_css('#usd-one-week.active')
             expect(page).to have_css('#usd-one-month.active')
+        end
+        
+        it "routes to three_month view when link is clicked" do
+            visit usd_one_month_path
+            click_link "3 Month"
+
+            expect(page).to have_css('#chart-1')
+            expect(page).to_not have_css('#usd-one-month.active')
+            expect(page).to have_css('#usd-three-month.active')
         end
 
     end
