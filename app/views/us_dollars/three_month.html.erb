@@ -1,10 +1,4 @@
 <div class="centered">
-    <div>
-            <%= active_link_to "1 Day", usd_one_day_path, method: "get", class: "btn btn-primary", id: "usd-one-day" %>
-            <%= active_link_to "1 Week", usd_one_week_path, method: "get", class: "btn btn-primary", id: "usd-one-week" %>
-            <%= active_link_to "1 Month", usd_one_month_path, method: "get", class: "btn btn-primary", id: "usd-one-month" %>
-            <%= active_link_to "3 Month", usd_three_month_path, method: "get", class: "btn btn-primary", id: "usd-three-month" %>
-            <%= active_link_to "1 Year", usd_one_year_path, method: "get", class: "btn btn-primary", id: "usd-one-year" %>
-    </div>
+    <%= render "view_links" %>
     <%= area_chart @request['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}, points: false, label: "USD" %>
 </div>
