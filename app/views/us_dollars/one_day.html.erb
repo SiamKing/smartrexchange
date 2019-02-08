@@ -1,3 +1,8 @@
 <div class="centered">
+        <div>
+                <%= active_link_to "1 Day", usd_one_day_path, method: "get", class: "btn btn-primary", id: "usd-one-day" %>
+                <%= active_link_to "1 Week", usd_one_week_path, method: "get", class: "btn btn-primary", id: "usd-one-week" %>
+        </div>
         <%= area_chart @request['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}, points: false, label: "USD" %>
+        
 </div>
