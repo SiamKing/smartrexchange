@@ -11,4 +11,10 @@ class UsDollarsController < ApplicationController
 
         @request = JSON.parse(@resp.body)
     end
+    
+    def one_month
+        @resp = Faraday.get('https://api.cotacoes.uol.com/currency/interday/list/month?format=JSON&fields=askvalue,date&currency=1')
+
+        @request = JSON.parse(@resp.body)
+    end
 end
