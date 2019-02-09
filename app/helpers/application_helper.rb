@@ -1,9 +1,12 @@
 module ApplicationHelper
 
     def api_call(type, period, currency)
-        @resp = Faraday.get("https://api.cotacoes.uol.com/currency/#{type}/list#{period}?format=JSON&fields=askvalue,date&currency=#{currency}")
-
-        @request = JSON.parse(@resp.body)
-        @request['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}
+        Faraday.get("https://api.cotacoes.uol.com/currency/#{type}/list#{period}?format=JSON&fields=askvalue,date&currency=#{currency}")
     end
+
+    def json_parser(response)
+        @body = JSON.parse(response.body)
+        @body['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}
+    end
+
 end
