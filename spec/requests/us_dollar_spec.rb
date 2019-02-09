@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UsDollar, type: :feature do
+RSpec.describe UsDollar, type: :request do
     describe "request one day view" do
         it "successfully renders one_day view" do
             visit usd_one_day_path

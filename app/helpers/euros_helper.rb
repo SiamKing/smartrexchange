@@ -1,0 +1,2 @@
+module EurosHelper
+end

@@ -1,0 +1,2 @@
+class EurosController < ApplicationController
+end
