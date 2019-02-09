@@ -18,6 +18,15 @@ class EurosController < ApplicationController
         end
     end
 
+    def one_month
+        resp = helpers.api_call(INTERDAY, MONTH, EURO_CODE)
+        if resp.success?
+            success_handler(resp)
+        else
+            helpers.error_alert
+        end
+    end
+
     private
 
     def success_handler(resp)
