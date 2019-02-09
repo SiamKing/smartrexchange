@@ -9,4 +9,8 @@ module ApplicationHelper
         @body['docs'].inject({}) {|res, v| res[v['date']] = v['askvalue']; res}
     end
 
+    def error_alert
+        flash[:danger] = "Whoops. That didn't work. Please try again."
+    end
+
 end
