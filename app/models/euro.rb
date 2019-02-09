@@ -1,0 +1,2 @@
+class Euro < ApplicationRecord
+end
