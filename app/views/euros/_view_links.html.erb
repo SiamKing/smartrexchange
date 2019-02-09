@@ -1,4 +1,4 @@
 <div>
-    <%= active_link_to "1 Day", euro_one_day_path, method: "get", class: "btn btn-primary", id: "euro-one-day" %>
-    
+    <%= active_link_to "1 Day", "/#{@controller}/one_day", method: "get", class: "btn btn-primary", id: "#{@currency}-one-day" %>
+    <%= active_link_to "1 Week", "/#{@controller}/one_week", method: "get", class: "btn btn-primary", id: "#{@currency}-one-week" %>
 </div>

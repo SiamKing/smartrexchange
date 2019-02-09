@@ -24,6 +24,7 @@ class EurosController < ApplicationController
         @chart_data = helpers.json_parser(resp)
         @legend = EURO
         @controller = "euros"
+        @currency = "euro"
         render 'shared/shared_view'
     end
 end
