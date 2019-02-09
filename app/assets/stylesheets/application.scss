@@ -12,6 +12,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "toastr";
 
 body {
    margin: 0 auto;
@@ -48,7 +49,7 @@ body {
 
 .centered {
    width: 60%;
-   height: 60%;
+   height: 70%;
 
    position: absolute;
    top:0;
