@@ -12,4 +12,10 @@ Rails.application.routes.draw do
   get '/euros/one_month', to: 'euros#one_month', as: 'euro_one_month'
   get '/euros/three_month', to: 'euros#three_month', as: 'euro_three_month'
   get '/euros/one_year', to: 'euros#one_year', as: 'euro_one_year'
+
+  get '/auds/one_day', to: 'auds#one_day', as: 'aud_one_day'
+  get '/auds/one_week', to: 'auds#one_week', as: 'aud_one_week'
+  get '/auds/one_month', to: 'auds#one_month', as: 'aud_one_month'
+  get '/auds/three_month', to: 'auds#three_month', as: 'aud_three_month'
+  get '/auds/one_year', to: 'auds#one_year', as: 'aud_one_year'
 end
