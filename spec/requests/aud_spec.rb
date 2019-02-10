@@ -68,5 +68,27 @@ RSpec.describe AUD, type: :request do
 
     end
 
+    describe "three month AUD view" do
+        it "successfully renders three_month view" do
+            visit aud_three_month_path
+
+            expect(page).to have_css('#chart-1')
+            expect(page).to have_css('#aud-three-month.active')
+            expect(page).to have_css('#aud.active')
+            expect(page).to have_no_css('#usd.active')
+        end
+
+        it "routes succesfully to three_month view when link is clicked" do
+            visit aud_one_month_path
+            click_link "3 Month"
+
+            expect(page).to have_no_css('#aud-one-month.active')
+            expect(page).to have_css('#aud-three-month.active')
+            expect(page).to have_css('#aud.active')
+            expect(page).to have_no_css('#usd.active')
+        end
+
+    end
+
 
 end
