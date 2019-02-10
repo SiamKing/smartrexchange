@@ -1,0 +1,2 @@
+class Aud < ApplicationRecord
+end
