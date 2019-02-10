@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/euros/one_day', to: 'euros#one_day', as: 'euro_one_day'
   get '/euros/one_week', to: 'euros#one_week', as: 'euro_one_week'
   get '/euros/one_month', to: 'euros#one_month', as: 'euro_one_month'
+  get '/euros/three_month', to: 'euros#three_month', as: 'euro_three_month'
 end
