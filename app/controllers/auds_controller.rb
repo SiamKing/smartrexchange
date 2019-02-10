@@ -4,4 +4,9 @@ class AudsController < ApplicationController
         resp = helpers.api_call(INTRADAY, '', AUD_CODE)
         view_handler(resp, AUD, AUD_CONTROLLER)
     end
+
+    def one_week
+        resp = helpers.api_call(INTERDAY, WEEK, AUD_CODE)
+        view_handler(resp, AUD, AUD_CONTROLLER)
+    end
 end
