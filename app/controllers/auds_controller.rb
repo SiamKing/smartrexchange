@@ -14,4 +14,9 @@ class AudsController < ApplicationController
         resp = helpers.api_call(INTERDAY, MONTH, AUD_CODE)
         view_handler(resp, AUD, AUD_CONTROLLER)
     end
+
+    def three_month
+        resp = helpers.api_call(INTERDAY, MONTHS, AUD_CODE)
+        view_handler(resp, AUD, AUD_CONTROLLER)
+    end
 end
