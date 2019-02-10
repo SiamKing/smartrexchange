@@ -97,5 +97,15 @@ RSpec.describe Euro, type: :request do
             expect(page).to have_no_css('#usd.active')
         end
 
+        it "routes succesfully to one year view when link is clicked" do
+            visit euro_three_month_path
+            expect(page).to have_css('#euro-three-month.active')
+            click_link "1 Year"
+
+            expect(page).to have_no_css('#euro-three-month.active')
+            expect(page).to have_css('#euro-one-year.active')
+            expect(page).to have_css('#euro.active')
+        end
+
     end
 end
