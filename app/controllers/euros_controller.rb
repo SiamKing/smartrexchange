@@ -19,6 +19,11 @@ class EurosController < ApplicationController
         resp = helpers.api_call(INTERDAY, MONTHS, EURO_CODE)
         view_handler(resp)
     end
+    
+    def one_year
+        resp = helpers.api_call(INTERDAY, YEAR, EURO_CODE)
+        view_handler(resp)
+    end
 
     private
 
