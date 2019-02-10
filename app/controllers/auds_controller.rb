@@ -1,0 +1,2 @@
+class AudsController < ApplicationController
+end
