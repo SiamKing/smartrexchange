@@ -47,7 +47,7 @@ RSpec.describe UsDollar, type: :request do
             expect(page).to have_css('#usd.active')
         end
 
-        it "routes to one_month view when link is clicked" do
+        it "routes to one_month view when link is clicked", js: true do
             visit usd_one_week_path
             click_link "1 Month"
 
@@ -68,12 +68,12 @@ RSpec.describe UsDollar, type: :request do
             expect(page).to have_css('#usd.active')
         end
         
-        it "routes to three_month view when link is clicked" do
+        it "routes to three_month view when link is clicked", js: true do
             visit usd_one_month_path
             click_link "3 Month"
 
             expect(page).to have_css('#chart-1')
-            expect(page).to_not have_css('#usd-one-month.active')
+            expect(page).to have_no_css('#usd-one-month.active')
             expect(page).to have_css('#usd-three-month.active')
             expect(page).to have_css('#usd.active')
         end
@@ -89,7 +89,7 @@ RSpec.describe UsDollar, type: :request do
             expect(page).to have_css('#usd.active')
         end
         
-        it "routes to one_year view when link is clicked" do
+        it "routes to one_year view when link is clicked", js: true do
             visit usd_one_month_path
             click_link "1 Year"
 
