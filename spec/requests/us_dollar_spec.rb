@@ -16,7 +16,7 @@ RSpec.describe UsDollar, type: :request do
             expect(page).to have_css('#usd.active')
         end
 
-        it "routes to one_week view when link is clicked" do
+        it "routes to one_week view when link is clicked", js: true do
             visit usd_one_day_path
             click_link "1 Week"
 
