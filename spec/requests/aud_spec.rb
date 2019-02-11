@@ -30,13 +30,7 @@ RSpec.describe AUD, type: :request do
         end
 
         it "routes succesfully to one_month view when link is clicked", js: true do
-            visit aud_one_week_path
-            click_link "1 Month"
-
-            expect(page).to have_no_css('#aud-one-week.active')
-            expect(page).to have_css('#aud-one-month.active')
-            expect(page).to have_css('#aud.active')
-            expect(page).to have_no_css('#usd.active')
+            view_link_test("auds", "one_week", "1 Month", "one-week", "one-month", "aud", "usd")
         end
 
     end
@@ -47,13 +41,7 @@ RSpec.describe AUD, type: :request do
         end
 
         it "routes succesfully to three_month view when link is clicked", js: true do
-            visit aud_one_month_path
-            click_link "3 Month"
-
-            expect(page).to have_no_css('#aud-one-month.active')
-            expect(page).to have_css('#aud-three-month.active')
-            expect(page).to have_css('#aud.active')
-            expect(page).to have_no_css('#usd.active')
+            view_link_test("auds", "one_month", "3 Month", "one-month", "three-month", "aud", "usd")
         end
 
     end
@@ -64,13 +52,7 @@ RSpec.describe AUD, type: :request do
         end
 
         it "routes succesfully to one year view when link is clicked", js: true do
-            visit aud_three_month_path
-            click_link "1 Year"
-
-            expect(page).to have_no_css('#aud-three-month.active')
-            expect(page).to have_css('#aud-one-year.active')
-            expect(page).to have_css('#aud.active')
-            expect(page).to have_no_css('#usd.active')
+            view_link_test("auds", "three_month", "1 Year", "three-month", "one-year", "aud", "usd")
         end
 
     end
