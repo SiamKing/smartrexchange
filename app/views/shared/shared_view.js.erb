@@ -1,0 +1,2 @@
+$("#view-links").html("<%= j render partial: "shared/view_links" %>")
+$("#chart").html("<%= j render partial: "shared/chart", locals: {label: @legend, chart_data: @chart_data} %>")
