@@ -3,19 +3,11 @@ require 'rails_helper'
 RSpec.describe UsDollar, type: :request do
     describe "request one day view" do
         it "successfully renders one_day view" do
-            visit usd_one_day_path
-            expect(page).to have_css('#chart-1')
-            expect(page).to have_css('#usd-one-day.active')
-            expect(page).to have_css('#usd.active')
+            view_test("us_dollars", "usd", "one", "day", "aud")
         end
 
         it "routes to one_day view when link is clicked", js: true do
-            visit usd_one_week_path
-            click_link "1 Day"
-
-            expect(page).to have_no_css('#usd-one-week.active')
-            expect(page).to have_css('#usd-one-day.active')
-            expect(page).to have_css('#usd.active')
+            view_link_test("us_dollars", "one_week", "1 Day", "one-week", "one-day", "usd", "aud")
         end
     end
 
