@@ -4,12 +4,7 @@ RSpec.describe AUD, type: :request do
 
     describe "one day AUD view" do
         it "successfully renders one_day view" do
-            visit aud_one_day_path
-
-            expect(page).to have_css('#chart-1')
-            expect(page).to have_css('#aud-one-day.active')
-            expect(page).to have_css('#aud.active')
-            expect(page).to have_no_css('#usd.active')
+            view_test("auds", "aud", "one_day", "one-day", "usd")
         end
 
         it "routes succesfully to one_day view when link is clicked", js: true do
