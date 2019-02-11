@@ -19,13 +19,7 @@ RSpec.describe AUD, type: :request do
         end
 
         it "routes succesfully to one_week view when link is clicked", js: true do
-            visit aud_one_day_path
-            click_link "1 Week"
-
-            expect(page).to have_no_css('#aud-one-day.active')
-            expect(page).to have_css('#aud-one-week.active')
-            expect(page).to have_css('#aud.active')
-            expect(page).to have_no_css('#usd.active')
+            view_link_test("auds", "one_day", "1 Week", "one-day", "one-week", "aud", "usd")
         end
 
     end
