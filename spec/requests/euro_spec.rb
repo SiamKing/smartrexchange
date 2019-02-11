@@ -12,8 +12,9 @@ RSpec.describe Euro, type: :request do
             expect(page).to have_no_css('#usd.active')
         end
 
-        it "routes succesfully to one_day view when link is clicked" do
+        it "routes succesfully to one_day view when link is clicked", js: true do
             visit euro_one_week_path
+            expect(page).to have_css('#euro-one-week.active')
             click_link "1 Day"
 
             expect(page).to have_no_css('#euro-one-week.active')
@@ -34,7 +35,7 @@ RSpec.describe Euro, type: :request do
             expect(page).to have_no_css('#usd.active')
         end
 
-        it "routes succesfully to one_week view when link is clicked" do
+        it "routes succesfully to one_week view when link is clicked", js: true do
             visit euro_one_day_path
             click_link "1 Week"
 
@@ -55,7 +56,7 @@ RSpec.describe Euro, type: :request do
             expect(page).to have_no_css('#usd.active')
         end
 
-        it "routes succesfully to one_month view when link is clicked" do
+        it "routes succesfully to one_month view when link is clicked", js: true do
             visit euro_one_week_path
             click_link "1 Month"
 
@@ -76,7 +77,7 @@ RSpec.describe Euro, type: :request do
             expect(page).to have_no_css('#usd.active')
         end
 
-        it "routes succesfully to three_month view when link is clicked" do
+        it "routes succesfully to three_month view when link is clicked", js: true do
             visit euro_one_month_path
             click_link "3 Month"
 
@@ -97,7 +98,7 @@ RSpec.describe Euro, type: :request do
             expect(page).to have_no_css('#usd.active')
         end
 
-        it "routes succesfully to one year view when link is clicked" do
+        it "routes succesfully to one year view when link is clicked", js: true do
             visit euro_three_month_path
             expect(page).to have_css('#euro-three-month.active')
             click_link "1 Year"
