@@ -14,7 +14,7 @@
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/us_dollars/one_day">
             SmartrExchange
           </a>
         </div>
@@ -22,5 +22,12 @@
     </nav>
     <%= render :partial => 'shared/flash_messages', :flash => flash %>
     <%= yield %>
+    <div id="footer" class="container">
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="navbar-inner navbar-content-center">
+          <p class="text-center">BRL Exchange Rates Against the USD, EUR, & AUD</p>
+        </div>
+      </nav>
+    </div>
   </body>
 </html>

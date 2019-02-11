@@ -14,11 +14,12 @@
 @import "bootstrap";
 @import "toastr";
 
-body {
+html, body {
    margin: 0 auto;
    padding: 0;
    height: 100%;
    font-family: sans-serif;
+   color: white !important;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
    background-color: transparent;
    background: transparent;
    border-color: transparent;
+   color: #fff !important;
 }
 
 .navbar-brand {
