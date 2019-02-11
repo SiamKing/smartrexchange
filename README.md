@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A web app that shows the BRL (Brazilian Real Dollar) exchange rates against the USD, EUR, and AUD in graph format.
 
-Things you may want to cover:
+Ruby version 2.5.1
+Rails 5.2.2
 
-* Ruby version
+Using - 
+  RSPEC and Capybara for testing
+  Chartkick for graphs
+  Faraday for API requests
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
