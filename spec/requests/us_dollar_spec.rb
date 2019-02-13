@@ -51,4 +51,12 @@ RSpec.describe UsDollar, type: :request do
         end
 
     end
+
+    describe "unknown route redirects to usd one day path" do
+        it "redirects to usd one day path" do
+            visit "/foo"
+
+            expect(page).to have_current_path(usd_one_day_path)
+        end
+    end
 end

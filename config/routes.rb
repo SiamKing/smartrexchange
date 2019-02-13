@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   get '/auds/one_month', to: 'auds#one_month', as: 'aud_one_month'
   get '/auds/three_month', to: 'auds#three_month', as: 'aud_three_month'
   get '/auds/one_year', to: 'auds#one_year', as: 'aud_one_year'
+
+  get '*path' => redirect('/us_dollars/one_day')
 end
